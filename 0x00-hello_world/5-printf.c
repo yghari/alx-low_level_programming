@@ -1,3 +1,6 @@
+ 1 contributor
+Executable File  12 lines (11 sloc)  269 Bytes
+
 #include <stdio.h>
 
 /**
@@ -7,7 +10,6 @@
  */
 int main(void)
 {
-	printf ("with proper grammar, but the outcome is a piece of art,\n");
+	printf("with proper grammar, but the outcome is a piece of art,\n");
 	return (0);
-
 }
