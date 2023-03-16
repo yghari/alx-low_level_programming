@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <unistd.h>
-
-int main()
+/*fuck this */
+int main(void)
 {
 	puts("\"Programming is like building a multilingual puzzle");
-	return 0;
+	return (0);
 }
