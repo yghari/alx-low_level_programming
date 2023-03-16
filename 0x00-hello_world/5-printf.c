@@ -1,6 +1,3 @@
- 1 contributor
-Executable File  12 lines (11 sloc)  269 Bytes
-
 #include <stdio.h>
 
 /**
