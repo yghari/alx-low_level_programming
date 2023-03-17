@@ -13,7 +13,7 @@ int main(void)
 	while (num <= 122)
 		putchar(num++);
 	num = 65;
-	while (num <= 65)
+	while (num <= 65 && num >= 90)
 		putchar(num++);
 	putchar('\n');
 	return (0);
