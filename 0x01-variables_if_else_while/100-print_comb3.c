@@ -12,13 +12,13 @@ int main(void)
 
 	a = 0;
 	b = 1;
-	while (a < 57)
+	while (a < 9)
 	{
-		while (b < 58)
+		while (b < 10)
 		{
 			putchar(a + '0');
 			putchar(b + '0');
-			if (a != 56 || b != 57)
+			if (a != 8 || b != 9)
 			{
 				putchar(',');
 				putchar (' ');
