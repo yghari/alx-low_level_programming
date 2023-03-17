@@ -2,7 +2,7 @@
 #include <time.h>
 #include <stdio.h>
 /**
- * main - print all lower case alpha
+ * main - print all lower case alphg
  *
  * Return: 0
 */
@@ -12,6 +12,6 @@ int main(void)
 
 	while (num <= 122)
 		putchar(num++);
-	putchar("\n");
+	putchar('\n');
 	return (0);
 }
