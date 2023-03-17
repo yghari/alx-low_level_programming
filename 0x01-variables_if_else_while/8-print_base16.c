@@ -14,7 +14,7 @@ int main(void)
 		putchar(num++);
 	num = 97;
 	while (num >= 97 && num <= 102)
-		puthchar(num++);
+		putchar(num++);
 	putchar('\n');
 	return (0);
 }
