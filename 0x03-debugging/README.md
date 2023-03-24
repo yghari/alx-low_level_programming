@@ -1,1 +1,7 @@
-salam
+The ALX project 0x03-debugging is a programming project designed to teach learners how to debug code in the C programming language. Debugging is the process of finding and fixing errors or bugs in computer code, and is an essential skill for any programmer.
+
+The project consists of several tasks, each of which presents learners with a piece of C code that contains one or more bugs. The goal of each task is to identify and fix the bugs, using a combination of debugging techniques such as tracing, testing, and code inspection.
+
+Learners are encouraged to use a variety of tools and strategies to help them debug the code, including print statements, code comments, and debugging software such as gdb. They are also encouraged to work collaboratively with other learners to share ideas and strategies for debugging code effectively.
+
+Overall, the 0x03-debugging project is an excellent way for learners to develop their skills in identifying and fixing bugs in C code, and to gain a deeper understanding of the debugging process. By completing this project, learners will be better equipped to tackle more complex programming tasks, and will be better prepared to work in a professional software development environment.
