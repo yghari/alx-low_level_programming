@@ -6,4 +6,4 @@ In the second part of the project, learners are introduced to the concept of var
 
 The project also includes additional challenges that build on these concepts, such as creating a program that performs basic arithmetic operations and printing formatted output to the screen.
 
-Overall, the 0x00-hello_world project is an excellent way for learners to get started with C programming and to gain a basic understanding of the language's syntax and features. By completing this project, learners will be better equipped to tackle more complex programming tasks in the future.
+Overall, the 0x00-hello_world project is an excellent way for learners to get started with C programming and to gain a basic understanding of the language's syntax and features. By completing this project, learners will be better equipped to tackle more complex programming tasks in the future. 
