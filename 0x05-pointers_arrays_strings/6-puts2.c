@@ -11,9 +11,9 @@ void	puts2(char *str)
 	int j;
 
 	j = 0;
-	while (str[j])
+	while (*(str + j))
 	{
-		_putchar(str[j]);
+		_putchar(*(str + j));
 		j += 2;
 	}
 	putchar('\n');
