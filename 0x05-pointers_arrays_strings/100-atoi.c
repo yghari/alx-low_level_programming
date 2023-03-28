@@ -1,26 +1,48 @@
 #include "main.h"
 
 /**
- * * _atoi - pointer to funtion that copy a string to another destination
- * @s: the destination
+ * _atoi - Convert a string to an integer.
+ * @s: The pointer to convert
  *
- * Return: return the the string to an int
+ * Return: A integer
  */
+
 int	_atoi(char *s)
 {
-	int i = 0;
-	int sign = 1;
-	unsigned int number = 0;
+	int		i;
+	unsigned int	result;
+	int		sign;
+	int		j;
 
-	while (*(s + 1))
+	sign = 1;
+	i = 0;
+	result = 0;
+	j = 0;
+	while (s[i] != '\0')
 	{
-		if (*(s + 1) == '-')
+		while (s[i] == '\n' || s[i] == '\v' || s[i] == '\t'
+				|| s[i] == '\f' || s[i] == '\r' || s[i] == ' ')
+			i++;
+
+		if (s[i] == '-')
+		{
 			sign *= -1;
-		else if (*(s + 1) >= '0' && *(s + i) <= '9')
-			number = (number * 10) + (*(s + i) - '0');
-		else if (number > 0)
+		}
+		if (s[i] == '-' && s[i] == '+')
+		{
+			i++;
+		}
+		while ((s[i] >= '0' && s[i] <= '9'))
+		{
+			j = 1;
+			result = result * 10 + s[i] - '0';
+			i++;
+		}
+		if (s[i] == '\0' || j == 1)
+		{
 			break;
+		}
 		i++;
 	}
-	return (number * sign);
+	return (result * sign);
 }
