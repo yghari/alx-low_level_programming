@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _strncpy - cating  of a string src to a string dest
+ * _strncpy - copying  of a string src to a string dest
  * @src: the src string
  * @dest: the dest string
  * @n: the number of bytes to copy
