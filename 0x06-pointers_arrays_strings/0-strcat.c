@@ -1,19 +1,27 @@
 #include "main.h"
 
 /**
- * _strlen - lenght of a string
- * @s: the string
- *
- * Return: the lenght of the string s
+ * _strcat - cating  of a string src to a string dest
+ * @src: the src string
+ * @dest: the dest string
+ * Return: a pointer to the the dest
  */
 
-int _strlen(char *s)
+char *_strcat(char *dest, char *src)
 {
 	int i;
+	int j;
 
 	i = 0;
-	while (s[i])
+	j = 0;
+	while (dest[i])
 		i++;
-	return (i);
-
+	while (src[j])
+	{
+		dest[i] = src[j];
+		i++;
+		j++;
+	}
+	dest[i] = '\0';
+	return (dest);
 }
