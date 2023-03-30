@@ -2,26 +2,30 @@
 
 /**
  * cap_string - Capitalizes all words of a string.
- * @str: Pointer to a string.
+ * @s: Pointer to a string.
  *
  * Return: Pointer to the modified string.
  */
-char *cap_string(char *str)
+char *cap_string(char *s)
 {
 	int i;
 
-	for (i = 0; str[i] != '\0'; i++)
+	i = 0;
+	if (s[i] >= 'a' && s[i] <= 'z')
 	{
-		if (i == 0 || str[i - 1] == ' ' || str[i - 1] == '\t' ||
-				str[i - 1] == '\n' || str[i - 1] == ',' ||
-				str[i - 1] == ';' || str[i - 1] == '.' ||
-				str[i - 1] == '!' || str[i - 1] == '?' ||
-				str[i - 1] == '\"' || str[i - 1] == '(' ||
-				str[i - 1] == ')' || str[i - 1] == '{' ||
-				str[i - 1] == '}')
-		{
-			str[i] = toupper(str[i]);
-		}
+		s[i] -= 32;
 	}
-	return str;
+	while (s[i])
+	{
+		if (s[i] == ' ' || s[i] == '\t' || s[i] == '\n' || s[i] == ','
+		|| s[i] == ';' || s[i] == '.' || s[i] == '!' || s[i] == '?'
+		|| s[i] == '\"' || s[i] == '(' || s[i] == ')' || s[i] == '{'
+		|| s[i] == '}')
+		{
+			if (s[i + 1] >= 'a' && s[i + 1] <= 'z')
+			s[i + 1] -= 'a' - 'A';
+		}
+		i++;
+	}
+	return (s);
 }
