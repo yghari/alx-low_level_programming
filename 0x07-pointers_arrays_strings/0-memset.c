@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * _memset - copying  of a string src to a string dest
- * @s: pointer to the src
- * @b: the charactere
- * @n: the size or
- * Return: a pointer to the the dest
+ * _memset - fills memory with a constant byte.
+ * @s: the buffer in the memory
+ * @b: the character to fill the n bytes of memory
+ * @n: the len of memory to be filled using _memset
+ * Return: (s).
  */
 
 char *_memset(char *s, char b, unsigned int n)
