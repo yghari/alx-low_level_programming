@@ -11,8 +11,8 @@ void print_diagsums(int *a, int size)
 {
 	int	i;
 	int	j;
-	int	res1;
-	int	res2;
+	unsigned int	res1;
+	unsigned int	res2;
 
 	i = 0;
 	res1 = 0;
