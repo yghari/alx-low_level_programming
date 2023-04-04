@@ -13,10 +13,8 @@ void print_diagsums(int *a, int size)
 	int	j;
 	int	res1;
 	int	res2;
-	int option;
 
 	i = 0;
-	option = 0;
 	res1 = 0;
 	res2 = 0;
 	j = size * size;
