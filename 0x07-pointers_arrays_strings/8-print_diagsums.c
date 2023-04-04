@@ -1,34 +1,27 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
- * print_diagsums - diagram
- * @a: String
- * @size: size of array
- * Return: NULL
+ * print_diagsums - prints the sum of the two diagonals.
+ * @a: the 2d array
+ * @size: the size of the array
  */
 
 void print_diagsums(int *a, int size)
 {
-	int	i;
-	int	j;
-	unsigned int	res_1;
-	unsigned int	res_2;
+	int i;
+	unsigned int sum_1;
+	unsigned int sum_2;
 
 	i = 0;
-	res_1 = 0;
-	res_2 = 0;
-	j = size * size;
-	res_1 = a[0];
-	while (i < j)
+	sum_1 = 0;
+	sum_2 = 0;
+
+	while (i < size)
 	{
-		res_1 = res_1 + a[i];
-		i = (size + i + 1);
+		sum_1 += a[(size * i) + i];
+		sum_2 += a[(size * (i + 1)) - (i + 1)];
+		i++;
 	}
-	i = 0;
-	while (i < j - 1)
-	{
-		res_2 = res_2 + a[i];
-		i = size + i - 1;
-	}
-	printf("%d, %d\n", res_1, res_2);
+	printf("%d, %d\n", sum_1, sum_2);
 }
