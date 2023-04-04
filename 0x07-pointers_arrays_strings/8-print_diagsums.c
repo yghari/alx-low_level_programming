@@ -11,24 +11,24 @@ void print_diagsums(int *a, int size)
 {
 	int	i;
 	int	j;
-	unsigned int	res1;
-	unsigned int	res2;
+	unsigned int	res_1;
+	unsigned int	res_2;
 
 	i = 0;
-	res1 = 0;
-	res2 = 0;
+	res_1 = 0;
+	res_2 = 0;
 	j = size * size;
-	res1 = a[0];
+	res_1 = a[0];
 	while (i < j)
 	{
-		res1 = res1 + a[i];
+		res_1 = res_1 + a[i];
 		i = (size + i + 1);
 	}
 	i = 0;
 	while (i < j - 1)
 	{
-		res2 = res2 + a[i];
+		res_2 = res_2 + a[i];
 		i = size + i - 1;
 	}
-	printf("%d, %d\n", res1, res2);
+	printf("%d, %d\n", res_1, res_2);
 }
