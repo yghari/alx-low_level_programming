@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _strspn - locates a character in a string.
+ * _strpbrk - locates a character in a string.
  * @s: String
  * @accept: character
  * Return: NULL
