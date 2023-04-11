@@ -28,40 +28,40 @@ char *str_concat(char *s1, char *s2)
 {
 	unsigned int i;
 	unsigned int j;
+	unsigned int oi;
+	unsigned int oj;
 	char *str;
 
 	if (s1 && s2)
 	{
-		i = _strlen(s1);
-		j = _strlen(s2);
+		oi = _strlen(s1);
+		oj = _strlen(s2);
 	}
 	else if (s1 == NULL && s2 == NULL)
 	{
-		i = 0;
-		j = 0;
+		oi = 0;
+		oj = 0;
 	}
 	else if (s1 == NULL)
 	{
-		i = 0;
-		j = _strlen(s2);
+		oi = 0;
+		oj = _strlen(s2);
 	}
 	else if (s2 == NULL)
 	{
-		j = 0;
-		i = _strlen(s1);
+		oj = 0;
+		oi = _strlen(s1);
 	}
-	str = (char *)malloc(sizeof(char) * (i + j + 1));
+	str = (char *)malloc(sizeof(char) * (oi + oj + 1));
 	if (!str)
 		return (NULL);
-	i = 0;
-	while (s1[i])
-	{
+	for (i = 0; i < oi; i++)
 		str[i] = s1[i];
+	for (j = 0; j < oj; j++)
+	{
+		str[i] = s2[j];
 		i++;
 	}
-	j = 0;
-	while (s2[j])
-		str[i++] = s2[j++];
 	str[i] = '\0';
 	return (str);
 }
