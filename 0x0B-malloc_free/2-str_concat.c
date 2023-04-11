@@ -52,7 +52,7 @@ char *str_concat(char *s1, char *s2)
 		oj = 0;
 		oi = _strlen(s1);
 	}
-	str = (char *)malloc(sizeof(char) * (oi + oj));
+	str = (char *)malloc(sizeof(char) * (oi + oj + 1));
 	if (!str)
 		return (NULL);
 	for (i = 0; i < oi; i++)
