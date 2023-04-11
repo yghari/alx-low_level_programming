@@ -26,42 +26,22 @@ int _strlen(char *s)
 
 char *str_concat(char *s1, char *s2)
 {
-	unsigned int i;
-	unsigned int j;
-	unsigned int oi;
-	unsigned int oj;
-	char *str;
-
-	if (s1 && s2)
-	{
-		oi = _strlen(s1);
-		oj = _strlen(s2);
-	}
-	if (s1 == NULL && s2 == NULL)
-	{
-		oi = 0;
-		oj = 0;
-	}
-	if (s1 == NULL)
-	{
-		oi = 0;
-		oj = _strlen(s2);
-	}
-	if (s2 == NULL)
-	{
-		oj = 0;
-		oi = _strlen(s1);
-	}
-	str = (char *)malloc(sizeof(char) * (oi + oj + 1));
-	if (!str)
-		return (NULL);
-	for (i = 0; i < oi; i++)
-		str[i] = s1[i];
-	for (j = 0; j < oj; j++)
-	{
-		str[i] = s2[j];
-		i++;
-	}
-	str[i] = '\0';
-	return (str);
+    unsigned int len1 = s1 ? strlen(s1) : 0;
+    unsigned int len2 = s2 ? strlen(s2) : 0;
+    char *result = malloc(len1 + len2 + 1);
+    if (!result) {
+        return NULL; // handle allocation failure
+    }
+    if (s1) {
+        for (unsigned int i = 0; i < len1; i++) {
+            result[i] = s1[i];
+        }
+    }
+    if (s2) {
+        for (unsigned int i = 0; i < len2; i++) {
+            result[len1 + i] = s2[i];
+        }
+    }
+    result[len1 + len2] = '\0'; // add null terminator
+    return result;
 }
