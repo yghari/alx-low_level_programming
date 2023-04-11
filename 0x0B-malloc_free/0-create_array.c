@@ -8,6 +8,7 @@
  * Return: Nothing.
  */
 
+
 char *create_array(unsigned int size, char c)
 {
 	unsigned int i;
@@ -16,7 +17,9 @@ char *create_array(unsigned int size, char c)
 	i = 0;
 	if (size == 0)
 		return (NULL);
-	arr = malloc(size * sizeof(char));
+	arr = (char *)malloc(size * sizeof(char));
+	if (arr == 0)
+		return (NULL);
 	while (i < size)
 	{
 		arr[i] = c;
