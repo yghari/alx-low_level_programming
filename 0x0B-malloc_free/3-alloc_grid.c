@@ -8,7 +8,7 @@
 * Return: A pointer to the 2D array, or NULL if allocation fails
 */
 
-char **alloc_grid(int width, int height)
+int **alloc_grid(int width, int height)
 {
 	int i, j;
 	int **arr = malloc(sizeof(int *) * height);
