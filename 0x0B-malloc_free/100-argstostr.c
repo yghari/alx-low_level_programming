@@ -44,7 +44,7 @@ char *argstostr(int ac, char **av)
 	if (!arr)
 		return (NULL);
 	i = 0;
-	while (av[i])
+	while (i < ac)
 	{
 		j = 0;
 		while (av[i][j])
