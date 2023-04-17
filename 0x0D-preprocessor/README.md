@@ -1,0 +1,1 @@
+salmu alaykum
