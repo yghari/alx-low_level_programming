@@ -7,6 +7,6 @@
  */
 void print_name(char *name, void (*f)(char *))
 {
-    /* Invoke the function pointed to by f, passing name as the argument */
-	f(name);
+	if (name != NULL && f != NULL)
+		f(name);
 }
