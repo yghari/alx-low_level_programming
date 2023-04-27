@@ -6,7 +6,7 @@
 #include <stdlib.h>
 
 /**
- * struct list_t - A linked list node with a string value and a length field.
+ * struct list_s - A linked list node with a string value and a length field.
  * @str: A pointer to a string value for the node.
  * @len: The length of the string value, in bytes.
  * @next: A pointer to the next node in the linked list.
