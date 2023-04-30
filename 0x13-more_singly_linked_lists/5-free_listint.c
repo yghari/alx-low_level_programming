@@ -2,7 +2,7 @@
 
 /**
 * free_listint - Frees a listint_t list.
-* @head: Pointer to a pointer to the head node of the list.
+* @head: Pointer to the head node of the list.
 */
 void free_listint(listint_t *head)
 {
