@@ -6,18 +6,19 @@
  *
  * Return: void.
  */
+
 void free_listint2(listint_t **head)
 {
-	listint_t *current_node;
+	listint_t *t_node;
 
 	if (head == NULL)
 		return;
 
-	while (*head != NULL)
+	while (*head)
 	{
-		current_node = *head;
-		*head = (*head)->next;
-		free(current_node);
+		t_node = (*head)->next;
+		free(t_node);
+		*head = t_node;
 	}
 	*head = NULL;
 }
