@@ -11,7 +11,7 @@ void print_binary(unsigned long int n)
 
 	if (n == 0)
 	{
-		printf("0");
+		_putchar('0');
 		return;
 	}
 	for (temp = n, shift = 0; (temp >>= 1) > 0; shift++)
@@ -19,8 +19,8 @@ void print_binary(unsigned long int n)
 	for (; shift >= 0; shift--)
 	{
 		if ((n >> shift) & 1)
-			printf("1");
+			_putchar('1');
 		else
-			printf("0");
+			_putchar('0');
 	}
 }
