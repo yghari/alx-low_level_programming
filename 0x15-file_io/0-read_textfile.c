@@ -13,34 +13,22 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	ssize_t readed , writen;
+	int opn, red, wrt;
 	char *buffer;
-	FILE *file;
-	if (filename == NULL)
+
+	buffer =  malloc(letters);
+	opn = open(filename, O_RDONLY);
+	if (buffer == NULL || filename == NULL)
 		return (0);
-	file = fopen(filename, "r");
-	if (file == NULL)
-		return (0);
-	buffer = malloc(sizeof(char) * letters);
-	if (buffer == NULL)
-	{
-		fclose(file);
-		return (0);
-	}
-	readed = fread(buffer, sizeof(char), letters, file);
-	if (readed == -1) {
-		free(buffer);
-		fclose(file);
-		return (0);
-	}
-	writen = write(1, buffer, readed);
-	if (writen == -1 || writen != readed)
+	red = read(opn, buffer, letters);
+	wrt = write(1, buffer, red);
+	if (opn == -1 || red == -1 || wrt == -1 || wrt != red)
 	{
 		free(buffer);
-		fclose(file);
+		close(opn);
 		return (0);
 	}
 	free(buffer);
-	fclose(file);
-	return (readed);
+	close(opn);
+	return (red);
 }
