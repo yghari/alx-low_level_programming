@@ -18,7 +18,9 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	buffer =  malloc(letters);
 	opn = open(filename, O_RDONLY);
-	if (buffer == NULL || filename == NULL)
+	if (buffer == NULL)
+		return (0);
+	if (filename == NULL)
 		return (0);
 	red = read(opn, buffer, letters);
 	wrt = write(1, buffer, red);
